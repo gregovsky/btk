@@ -1,0 +1,53 @@
+form:
+  label: "Text Image/Icon"
+  tabs:
+    - name: tabText
+      label: "Main"
+      fields:
+
+        - name: title
+          label: "Title"
+          description:
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - name: text
+          label: "Text"
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+
+        - name: orientation
+          label: "Layout"
+          description:
+          type: String
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          options:
+            - label: "Image on left, text on right (default)"
+              selected: true
+              value: imageOnLeft
+            - label: "Image on right, text on left"
+              value: imageOnRight
+            - label: "Image above text"
+              value: imageOnTop
+            - label: "Image bellow text"
+              value: imageOnBottom
+            - label: "No image"
+              value: noImage
+            - label: "No text"
+              value: noText
+
+        - !include /btk/includes/dialogs/imageOrIcon.inc.yaml
+
+
+    - name: tabStyles
+      label: Styles
+      fields:
+
+        - !include /btk/includes/dialogs/titleSize.inc.yaml
+
+        - !include /btk/includes/dialogs/imageStyle.inc.yaml
+
+        - !include /btk/includes/dialogs/divClass.inc.yaml
+
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml

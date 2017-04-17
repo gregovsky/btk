@@ -1,0 +1,35 @@
+form:
+  label: "Image"
+  tabs:
+    - name: tabImage
+      label: "Image"
+      fields:
+
+        - name: image
+          label: "Image from Assets"
+          description: "Select an asset"
+          appName: assets
+          targetWorkspace: dam
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+        - name: lightbox
+          label: "Lightbox"
+          buttonLabel: "enlarge image on click using lightbox effect"
+          defaultValue: true
+          type: Boolean
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+
+    - name: tabStyles
+      label: "Styles"
+      fields:
+
+        - !include /btk/includes/dialogs/imageStyle.inc.yaml
+
+        - !include /btk/includes/dialogs/divClass.inc.yaml
+
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml

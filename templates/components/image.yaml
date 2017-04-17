@@ -1,0 +1,7 @@
+title: Image (with lightbox)
+renderType: freemarker
+templateScript: /btk/templates/components/image.ftl
+dialog: btk:components/image
+
+parameters:
+  divClass: btkImage

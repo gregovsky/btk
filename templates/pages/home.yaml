@@ -1,0 +1,39 @@
+title: "Home page [#btk]"
+templateScript: /btk/templates/pages/home.ftl
+renderType: freemarker
+dialog: btk:pages/home
+visible: true
+
+areas:
+
+  header:
+    availableComponents:
+      jumbotron:
+        id: btk:components/jumbotron
+
+  main:
+    templateScript: /btk/templates/areas/list.ftl
+    availableComponents:
+      section:
+        id: btk:components/section
+
+  footer:
+    templateScript: /btk/templates/areas/list.ftl
+    autoGeneration:
+      generatorClass: info.magnolia.rendering.generator.CopyGenerator
+      content:
+        section:
+          nodeType: mgnl:component
+          templateId: btk:components/section
+
+parameters:
+  body_class: home
+
+### Main Container - 'container' (default) or 'container-fluid'
+#  main_container: container-fluid
+
+### Navbar Class - 'navbar navbar-inverse navbar-fixed-top' (default)
+#  navbar_class: navbar navbar-fixed-bottom
+
+### Navbar Container - 'container' (default) or 'container-fluid'
+#  navbar_container: container-fluid

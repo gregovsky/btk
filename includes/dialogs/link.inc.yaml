@@ -1,0 +1,48 @@
+  name: link
+  label: "Target"
+  description:
+  class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+  fields:
+
+    - name: internal
+      appName: pages
+      label: "Select page:"
+      targetWorkspace: website
+      type: String
+      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+      identifierToPathConverter:
+        class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+    - name: external
+      label: "Enter url (including http://):"
+      type: String
+      class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+    - name: dam
+      appName: assets
+      fieldEditable: true
+      label: "Select asset (image, video, file, ...):"
+      targetWorkspace: dam
+      type: String
+      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+      identifierToPathConverter:
+        class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+
+    - name: contact
+      appName: contacts
+      label: "Select contact:"
+      targetWorkspace: contacts
+      type: String
+      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+      identifierToPathConverter:
+        class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+  options:
+    - label: "Internal"
+      value: internal
+    - label: "External"
+      value: external
+    - label: "Asset"
+      value: dam
+    - label: "Contact"
+      value: contact

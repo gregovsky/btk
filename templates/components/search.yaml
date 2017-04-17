@@ -1,0 +1,6 @@
+title: search
+renderType: freemarker
+templateScript: /btk/templates/components/search.ftl
+
+parameters:
+  divClass: btkSearch

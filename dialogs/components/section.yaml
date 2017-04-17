@@ -1,0 +1,50 @@
+form:
+  label: Row
+  tabs:
+    - name: tabMain
+      label: "Main"
+      fields:
+
+        - name: title
+          label: "Section Title"
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - !include /btk/includes/dialogs/titleSize.inc.yaml
+
+        - name: layout
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: "Layout"
+          options:
+            - label: "1: 100%"
+              value: col-xs-12
+              selected: true
+            # 2 columns:
+            - label: "2: 50% + 50%"
+              value: col-xs-12 col-sm-6, col-xs-12 col-sm-6
+            - label: "2: 66% + 33%"
+              value: col-xs-12 col-sm-8, col-xs-12 col-sm-4
+#            - label: "2: 33% + 66%"
+#              value: col-xs-12 col-sm-4, col-xs-12 col-sm-8
+            # 3 columns:
+            - label: "3: 33% + 33% + 33%"
+              value: col-xs-12 col-sm-6 col-md-4, col-xs-12 col-sm-6 col-md-4, col-xs-12 col-sm-6 col-md-4
+#            - label: "3: 50% + 25% + 25%"
+#              value: col-xs-12 col-sm-6 col-md-6, col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-3
+#            - label: "3: 25% + 50% + 25%"
+#              value: col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-6, col-xs-12 col-sm-6 col-md-3
+#            - label: "3: 25% + 25% + 50%"
+#              value: col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-6
+            # 4 columns:
+            - label: "4: 25% + 25% + 25% + 25%"
+              value: col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-3, col-xs-12 col-sm-6 col-md-3
+            # 6 columns:
+            - label: "6: 16% + 16% + 16% + 16% + 16% + 16%"
+              value: col-xs-6 col-sm-4 col-md-2, col-xs-6 col-sm-4 col-md-2, col-xs-6 col-sm-4 col-md-2, col-xs-6 col-sm-4 col-md-2, col-xs-6 col-sm-4 col-md-2, col-xs-6 col-sm-4 col-md-2
+
+    - name: tabStyles
+      label: "Styles"
+      fields:
+
+        - !include /btk/includes/dialogs/divClass.inc.yaml
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml

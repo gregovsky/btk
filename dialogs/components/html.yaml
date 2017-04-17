@@ -1,0 +1,24 @@
+form:
+  label: "HTML"
+  tabs:
+
+    - name: tabMain
+      label: "Main"
+      fields:
+
+        - name: editHTML
+          label: "HTML code"
+          description:
+          i18n: true
+          rows: 8
+          required: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+    - name: tabStyles
+      label: "Styles"
+      fields:
+
+        - !include /btk/includes/dialogs/divClass.inc.yaml
+
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml

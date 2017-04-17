@@ -1,0 +1,65 @@
+form:
+  label: "Carousel"
+  tabs:
+
+    - name: tabMain
+      label: "Main"
+      fields:
+
+        - name: slides
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Slides
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: "Title"
+
+              - name: background
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                label: "Slide Background"
+                targetWorkspace: dam
+                appName: assets
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+              - name: abstract
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                label: "Abstract"
+                height: 200
+
+              - name: link
+                appName: pages
+                label: "Select page:"
+                targetWorkspace: website
+                type: String
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+
+              - name: linkLabel
+                label: "Owerwrite Link Label"
+                description:
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+              - name: information
+                class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                label: ""
+                value: "Although all the fields are optional we recommend using an image as a background"
+
+              - name: separation
+                class: info.magnolia.ui.form.field.definition.StaticFieldDefinition
+                label: ""
+                value: "----------------------------------------------------------------------------"
+
+
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml

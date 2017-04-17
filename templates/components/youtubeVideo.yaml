@@ -1,0 +1,7 @@
+title: "Youtube video"
+renderType: freemarker
+templateScript: /btk/templates/components/youtubeVideo.ftl
+dialog: btk:components/youtubeVideo
+
+parameters:
+  divClass: btkYoutubeVideo

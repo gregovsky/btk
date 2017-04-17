@@ -1,0 +1,4 @@
+  name: divClass
+  label: Additional DIV class
+  type: String
+  class: info.magnolia.ui.form.field.definition.TextFieldDefinition

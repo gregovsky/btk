@@ -1,0 +1,13 @@
+[#assign total = 0]
+[#assign has_next = true]
+[#if components?has_content ]
+    [#assign total = components?size]
+    [#list components as component]
+        [#if total == (component_index+1)]
+            [#assign has_next = false]
+        [/#if]
+        [@cms.component content=component contextAttributes={"index":component_index,"total":total,"parity":(component_index % 2 == 0)?string("even","odd"),"has_next":has_next}/]
+    [/#list]
+[#elseif cmsfn.isEditMode()]
+    <p class="text-center bg-info"><small>Empty area #${((ctx.index!0)+1)}</small></p>
+[/#if]

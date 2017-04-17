@@ -1,0 +1,38 @@
+form:
+  label: Youtube Player
+  tabs:
+    - name: tabMain
+      label: Youtube
+      fields:
+
+        - name: link
+          label: Link
+          description: You can enter a link to a video or playlist.
+          required: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - name: startTime
+          label: Start time
+          description: 'If you want the video to start from another point, enter a time with format: XmYYs (X minutes, YY seconds).'
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - name: inPopup
+          label: "Show in popup"
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          buttonLabel: ""
+
+        - name: inPopupLinkLabel
+          label: "Link lable for popup"
+          description: ""
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - !include /btk/includes/dialogs/glyphicons.inc.yaml
+
+
+    - name: tabStyles
+      label: Styles
+      fields:
+
+        - !include /btk/includes/dialogs/divClass.inc.yaml
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml

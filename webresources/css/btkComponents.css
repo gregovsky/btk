@@ -1,0 +1,11 @@
+.btkLink,
+.btkTeaser,
+.btkHtml,
+.btkImage,
+.btkTextImage,
+.btkJumbotron,
+.btkContacts,
+.btkSearch,
+.btkCarousel {
+  margin-bottom: 20px;
+}

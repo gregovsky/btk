@@ -1,0 +1,26 @@
+  name: imageOrIcon
+  label: "Image or Icon"
+  description: "List of Glyphicons with preview here: http://getbootstrap.com/components/#glyphicons"
+  class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+  fields:
+
+    - !include /btk/includes/dialogs/glyphicons.inc.yaml
+
+    - name: image
+      appName: assets
+      description: Select an asset
+      label: "Image from Assets"
+      targetWorkspace: dam
+      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+      identifierToPathConverter:
+        class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+      contentPreviewDefinition:
+        contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+
+  options:
+    - name: image
+      label: "Image from Assets"
+      value: image
+    - name: icon
+      label: "Icon from Glyphicons"
+      value: icon

@@ -1,0 +1,7 @@
+title: "Text & Image/Icon"
+renderType: freemarker
+templateScript: /btk/templates/components/textImage.ftl
+dialog: btk:components/textImage
+
+parameters:
+  divClass: btkTextImage

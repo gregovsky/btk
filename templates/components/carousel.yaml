@@ -1,0 +1,7 @@
+title: Carousel
+renderType: freemarker
+templateScript: /btk/templates/components/carousel.ftl
+dialog: btk:components/carousel
+
+parameters:
+  divClass: btkCarousel carousel slide

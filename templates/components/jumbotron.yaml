@@ -1,0 +1,7 @@
+title: "Jumbotron"
+renderType: freemarker
+templateScript: /btk/templates/components/jumbotron.ftl
+dialog: btk:components/jumbotron
+
+parameters:
+  divClass: btkJumbotron jumbotron text-center

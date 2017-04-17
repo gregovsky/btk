@@ -1,0 +1,15 @@
+  name: imageStyle
+  label: "Image style"
+  description:
+  type: String
+  class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+  options:
+    - label: "* none (default)"
+      value: img
+      selected: true
+    - label: "rounded"
+      value: img-rounded
+    - label: "circle"
+      value: img-circle
+    - label: "thumbnail"
+      value: img-thumbnail

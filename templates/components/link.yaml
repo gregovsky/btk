@@ -1,0 +1,7 @@
+title: Link / Button
+renderType: freemarker
+templateScript: /btk/templates/components/link.ftl
+dialog: btk:components/link
+
+parameters:
+  divClass: btkLink

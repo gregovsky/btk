@@ -1,0 +1,15 @@
+  name: linkSize
+  label: "Button size"
+  description:
+  type: String
+  class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+  options:
+    - label: "* Default button"
+      value: ""
+      selected: true
+    - label: "Large button"
+      value: btn-lg
+    - label: "Small button"
+      value: btn-sm
+    - label: "Extra small button"
+      value: btn-xs

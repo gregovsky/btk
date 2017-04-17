@@ -1,0 +1,21 @@
+  name: linkStyle
+  label: "Button style"
+  description:
+  type: String
+  class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+  options:
+    - label: "* Link"
+      value: btn-link
+    - label: "Default"
+      selected: true
+      value: btn-default
+    - label: "Primary"
+      value: btn-primary
+    - label: "Success"
+      value: btn-success
+    - label: "Info"
+      value: btn-info
+    - label: "Warning"
+      value: btn-warning
+    - label: "Danger"
+      value: btn-danger

@@ -1,0 +1,39 @@
+form:
+  label: "Teaser"
+  tabs:
+    - name: tabTeaser
+      label: "Main"
+      fields:
+        - !include /btk/includes/dialogs/link.inc.yaml
+
+        - name: teaserTitle
+          label: "Owerwrite Title"
+          description:
+          i18n: true
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - name: teaserAbstract
+          label: "Owerwrite Abstract"
+          description:
+          i18n: true
+          rows: 5
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - name: linkLabel
+          label: "Owerwrite Link Label"
+          description:
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+
+        - !include /btk/includes/dialogs/imageOrIcon.inc.yaml
+
+
+    - name: tabStyles
+      label: Styles
+      fields:
+
+        - !include /btk/includes/dialogs/linkStyle.inc.yaml
+
+        - !include /btk/includes/dialogs/divClass.inc.yaml
+
+
+actions: !include /btk/includes/dialogs/actions.inc.yaml
